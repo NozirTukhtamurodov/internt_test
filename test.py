@@ -13,7 +13,7 @@ import aiohttp
 import asyncio
 import json
 
-async def gest_chat_completion(model, messages):
+async def get_chat_completion(model, messages):
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer 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",
@@ -32,4 +32,4 @@ async def gest_chat_completion(model, messages):
 model = "gpt-3.5-turbo"
 messages = [{"role": "user", "content": "Hello!"}]
 response = asyncio.run(get_chat_completion(model, messages))
-print(response)
+print(response, '2323232')
