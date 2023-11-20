@@ -22,7 +22,7 @@ async def get_chat_completion(model, messages):
     payload = {
         "model": model,
         "messages": messages,
-        "temperature": 0.5,
+        "temperature": 0.7,
     }
     async with aiohttp.ClientSession() as session:
         async with session.post(url, headers=headers, data=json.dumps(payload), verify_ssl=False) as response:
